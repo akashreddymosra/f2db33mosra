@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+  - var result = [{"carBrand":"BMW","carColor":"grey","carCost":5000000},{"carBrand":"Audi","carColor":"silver","carCost":4500000},{"carBrand":"Benz","carColor":"white","carCost":6000000}]
+  div.container-fluid
+     div.row
+        each item,index in result
+            div.col-sm-2(onclick=`buy(${index})`) Car Brand: #{item["carBrand"]}  <br>  Car Color: #{item["carColor"]} <br> Car Cost: #{item["carCost"]} 
+  script.
+      function buy(inx){
+         alert("you purchased item "+(inx+1))
+      }

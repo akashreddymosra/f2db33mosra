@@ -1,6 +1,6 @@
-# f2wb33mosra
+# f2db33mosra
 this is my second server i created.
-link:[https://f2wb33mosra.onrender.com](https://f2wb33mosra.onrender.com)
+link:
 ```
 
 class cars{

@@ -1,0 +1,35 @@
+extends layout
+block content
+ div(class="container-fluid p-5 bg-primary text-black text-center")
+  h2.text-center Create new car 
+ br
+ form(id='carsForm', action="/resource/cars", method="POST")
+  div.form-group
+   label.carstyle(for='carBrand') car Brand Name
+   input#carBrand(type='text', name='carBrand')
+  div.form-group
+   label.carstyle(for='carcolor')  car Color
+   input#carcolor(type='text', name='carcolor')
+  div.form-group
+   label.carstyle(for='carcost') car cost
+   input#carcost(type='number', name='carcost')
+   br
+   button(type="submit",class="btn btn-danger") SUBMIT
+
+ script.
+  document.forms['carsForm'].addEventListener('submit', (event) => {
+  event.preventDefault();
+  // TODO do something here to show user that form is being submitted
+  fetch(event.target.action, {
+   method: 'POST',
+   body: new URLSearchParams(new FormData(event.target)) // event.target is the form
+  }).then((resp) => {
+   return resp.json(); // or resp.text() or whatever the server sends
+  }).then((body) => {
+   alert("Save succeded")
+  // TODO handle body
+  }).catch((error) => {
+  // TODO handle error
+   alert("Save failed " + error )
+   });
+  });

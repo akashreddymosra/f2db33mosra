@@ -15,7 +15,7 @@ router.get('/', api_controller.api);
 // POST request for creating a cars.  
 router.post('/cars', cars_controller.cars_create_post); 
  
-// DELETE request to delete cars. 
+// // DELETE request to delete cars. 
 router.delete('/cars/:id', cars_controller.cars_delete); 
  
 // PUT request to update cars. 
@@ -26,5 +26,6 @@ router.get('/cars/:id', cars_controller.cars_detail);
  
 // GET request for list of all cars items. 
 router.get('/cars', cars_controller.cars_list); 
+
  
 module.exports = router;

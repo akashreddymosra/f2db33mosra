@@ -6,3 +6,14 @@ body {
 a {
   color: #00B7FF;
 }
+
+
+.costumeAttr {
+  background-color: aquamarine;
+  width: 120px;
+ }
+
+ .carstyle {
+  background-color: rgb(30, 243, 101);
+  width: 220px;
+ }
